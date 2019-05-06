@@ -31,23 +31,24 @@ This service is used for querying organizations by the following filters:
 * started first with attempting to extract the data from the .csv file via http.Get
 * due to the line endings, these requests in addition to straight copy/read of the .csv to the local file system resulted in a data set with only the last organization listed being returned
 * to solve, downloaded a copy of the .csv and manually returned each line - this resolved the issue as now file read recognized each end of line
-* with data successfully retieved, added organization and search request dto models
-* added struct with loading and caching of the data from the .csv file in the constructor
-* added functionality to perform desired filtering on the struct
-* added struct to handle http request and response - gets querystring values and creates search request dto to pass to the filterer
-* connected http handler struct to filter struct
-* added main.go entry with routing on the desired port
+* with data successfully retieved, performed the next steps to hook up filtering logic and routing
+    * added organization and search request dto models
+    * added struct with loading and caching of the data from the .csv file in the constructor
+    * added functionality to perform desired filtering on the struct
+    * added struct to handle http request and response - gets querystring values and creates search request dto to pass to the filterer
+    * connected http handler struct to filter struct
+    * added main.go entry with routing on the desired port
 * http handler uses filtering interface so the struct that performs the actual filtering can be replaced if the datasource is changed
 
 # Getting Started
 ## Before Running the Api
-* golang will need to be install on the local machine
+* golang will need to be installed on the local machine
 * installation documentation `https://golang.org/doc/install`
 * git will need to be installed on the local machine
 * installation documentation `https://git-scm.com/book/en/v2/Getting-Started-Installing-Git`
-* get the repository running this command in a chosen directory `git clone https://github.com/peggyhouseman/treetopcommons.git`
+* get the repository by running this command in a chosen directory `git clone https://github.com/peggyhouseman/treetopcommons.git`
 ## Building and Running
-* navigate to the repository's root directory
+* navigate to the repository directory
 * run in terminal `go run main.go`
 * api is now running on 127.0.0.1:3000
 ## Sample Request
