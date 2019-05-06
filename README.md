@@ -45,7 +45,7 @@ This service is used for querying organizations by the following filters:
 * installation documentation `https://golang.org/doc/install`
 * git will need to be installed on the local machine
 * installation documentation `https://git-scm.com/book/en/v2/Getting-Started-Installing-Git`
-* get the repository running this command in a chosen directory `https://github.com/peggyhouseman/treetopcommons.git`
+* get the repository running this command in a chosen directory `git clone https://github.com/peggyhouseman/treetopcommons.git`
 ## Building and Running
 * navigate to the repository's root directory
 * run in terminal `go run main.go`
