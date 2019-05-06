@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"organization/services"
+)
 
 func main() {
-	fmt.Println("hello")
+	services.MapRoutes()
 }
